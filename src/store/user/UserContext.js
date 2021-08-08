@@ -1,15 +1,20 @@
-import React, { createContext, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { createContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import CryptoJS from "crypto-js";
+import USERS from "../../data/users.json";
+import { useEffect } from "react";
+
+const secretKey = "pxq";
 
 const defaultUserData = {
-  user: 'seb',
-  password: '123',
+  user: "seb",
+  password: "123",
   shoppingCart: () => {
-    let cart = localStorage.getItem('shoppingCart');
+    let cart = localStorage.getItem("shoppingCart");
     if (cart === null) {
-      localStorage.setItem('shoppingCart', JSON.stringify([]));
+      localStorage.setItem("shoppingCart", JSON.stringify([]));
     }
-    cart = localStorage.getItem('shoppingCart');
+    cart = localStorage.getItem("shoppingCart");
     cart = JSON.parse(cart);
     return cart;
   },
@@ -24,20 +29,38 @@ export const UserProvider = (props) => {
     defaultUserData.shoppingCart
   );
 
+  const [users, setUsers] = useState();
+
+  useEffect(() => {
+    let pUsers = USERS;
+    pUsers.forEach((user) => {
+      var ciphertext = CryptoJS.AES.encrypt("123", secretKey).toString();
+      user.password = ciphertext;
+    });
+    setUsers(pUsers);
+  });
+  console.log(users);
+  // // Encrypt
+  // var ciphertext = CryptoJS.AES.encrypt("123", secretKey).toString();
+
+  // // Decrypt
+  // var bytes = CryptoJS.AES.decrypt(ciphertext, secretKey);
+  // var originalText = bytes.toString(CryptoJS.enc.Utf8);
+
   function verifyCredentials(pUser, pPassword) {
-    if (
-      pUser === defaultUserData.user &&
-      pPassword === defaultUserData.password
-    ) {
-      localStorage.setItem('key', 12345678);
-      return true;
-    } else {
-      return false;
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].username == pUser) {
+        console.log(users[i].password);
+        var bytes = CryptoJS.AES.decrypt(users[i].password, secretKey);
+        var originalText = bytes.toString(CryptoJS.enc.Utf8);
+        console.log(pPassword);
+        console.log(originalText);
+      }
     }
   }
 
   function checkIfSignedIn() {
-    let key = localStorage.getItem('key');
+    let key = localStorage.getItem("key");
     if (key === null) {
       return false;
     } else {
@@ -46,12 +69,29 @@ export const UserProvider = (props) => {
   }
 
   function signOut() {
-    localStorage.removeItem('key');
+    localStorage.removeItem("key");
+  }
+
+  function register(pName, pLastName, pEmail, pPassword, pUserName) {
+    var encryptedPw = CryptoJS.AES.encrypt(pPassword, secretKey).toString();
+    let newUser = {
+      username: pUserName,
+      password: encryptedPw,
+      first_name: pName,
+      last_name: pLastName,
+      email: pEmail,
+      cart: [],
+    };
+    let oldUsers = [...users];
+    oldUsers.push(newUser);
+    setUsers(oldUsers);
+
+    console.log(users);
   }
 
   function clearCart() {
     setShoppingCart([]);
-    localStorage.setItem('shoppingCart', JSON.stringify([]));
+    localStorage.setItem("shoppingCart", JSON.stringify([]));
   }
 
   function checkIfAlreadyInCart(prodId) {
@@ -69,9 +109,8 @@ export const UserProvider = (props) => {
     } else {
       cart[added].quantity += product.quantity;
     }
-    localStorage.setItem('shoppingCart', JSON.stringify(cart));
-    setShoppingCart(JSON.parse(localStorage.getItem('shoppingCart')));
-    console.log(shoppingCart);
+    localStorage.setItem("shoppingCart", JSON.stringify(cart));
+    setShoppingCart(JSON.parse(localStorage.getItem("shoppingCart")));
   }
 
   function removeFromCart(shoppingCartID) {
@@ -80,8 +119,8 @@ export const UserProvider = (props) => {
     );
     let cart = [...shoppingCart];
     cart.splice(prodIndex, 1);
-    localStorage.setItem('shoppingCart', JSON.stringify(cart));
-    setShoppingCart(JSON.parse(localStorage.getItem('shoppingCart')));
+    localStorage.setItem("shoppingCart", JSON.stringify(cart));
+    setShoppingCart(JSON.parse(localStorage.getItem("shoppingCart")));
   }
 
   return (

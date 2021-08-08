@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function AddReduceBtn(props) {
   const { changeWord, taken } = props;
-  const [items, setItems] = useState(taken || 1);
+  const [items, setItems] = useState(1);
 
   return (
     <div className="addredbtn">
@@ -22,8 +22,8 @@ export default function AddReduceBtn(props) {
       <button
         className="addredbtn__button --right"
         onClick={(e) => {
-            setItems(items + 1);
-            changeWord(items + 1);
+          setItems(items + 1);
+          changeWord(items + 1);
         }}
       >
         +

@@ -1,0 +1,26 @@
+[
+    {
+        "username": "sebas",
+        "password": "123",
+        "first_name": "Sebastian",
+        "last_name": "Chacon",
+        "email": "zebaz9898@gmail.com",
+        "cart": []
+    },
+    {
+        "username": "admin",
+        "password": "123",
+        "first_name": "Sebastian",
+        "last_name": "Chacon",
+        "email": "zebaz9898@gmail.com",
+        "cart": []
+    },
+    {
+        "username": "xo",
+        "password": "123",
+        "first_name": "Sebastian",
+        "last_name": "Chacon",
+        "email": "zebaz9898@gmail.com",
+        "cart": []
+    }
+]

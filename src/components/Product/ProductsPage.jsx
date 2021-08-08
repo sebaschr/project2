@@ -1,12 +1,10 @@
-import Navbar from '../Navbar/Navbar';
-import Banner from '../General/Banner';
-import ProductCard from '../Product/ProductCard';
+import Navbar from "../Navbar/Navbar";
+import Banner from "../General/Banner";
+import ProductCard from "../Product/ProductCard";
 
-import dataJSON from '../../data/products.json';
+import dataJSON from "../../data/products.json";
 export default function ProductsPage(props) {
   let products = dataJSON;
-  console.log(products);
-
   return (
     <>
       <Navbar />

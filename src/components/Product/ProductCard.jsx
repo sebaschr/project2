@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../store/user/UserContext';
-import AddReduceBtn from './AddReduceBtn';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../store/user/UserContext";
+import AddReduceBtn from "./AddReduceBtn";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ProductsPage(props) {
   const { product } = props;
-  const link = '/products/item/' + product.id;
-  const [counter,setCounter] = useState(1)
+  const link = "/products/item/" + product.id;
+  const [counter, setCounter] = useState(1);
   const [taken, setTaken] = useState(null);
   const [inCart, setInCart] = useState(false);
 
@@ -36,7 +36,7 @@ export default function ProductsPage(props) {
 
   const notify = () =>
     toast.info(`Item added to the cart`, {
-      position: 'top-right',
+      position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -50,7 +50,7 @@ export default function ProductsPage(props) {
       to={link}
       onClick={(e) => {
         if (e.target !== e.currentTarget) {
-          if (['A', 'BUTTON'].includes(e.target.nodeName)) {
+          if (["A", "BUTTON"].includes(e.target.nodeName)) {
             e.preventDefault();
           }
         }
@@ -71,7 +71,6 @@ export default function ProductsPage(props) {
           if (hidden) {
             setHidden(false);
           } else {
-            console.log(product);
             createItem();
             notify();
             setHidden(true);
@@ -85,9 +84,7 @@ export default function ProductsPage(props) {
         <>
           <p>Please enter a quantity</p>
 
-          <AddReduceBtn
-            changeWord={(counter) => setCounter(counter)}
-          />
+          <AddReduceBtn changeWord={(counter) => setCounter(counter)} />
           {inCart && <p>{taken} items in the cart already</p>}
           <button
             onClick={(e) => {

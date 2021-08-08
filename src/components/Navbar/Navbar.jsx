@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../store/user/UserContext';
-import { useHistory, Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../store/user/UserContext";
+import { useHistory, Link } from "react-router-dom";
 import {
   faBars,
   faTimes,
   faCartPlus,
   faSignOutAlt,
   faSignInAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Navbar(props) {
-  const { checkIfSignedIn } = useContext(UserContext);
+  const { checkIfSignedIn, signOut } = useContext(UserContext);
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
@@ -27,8 +27,8 @@ export default function Navbar(props) {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +87,13 @@ export default function Navbar(props) {
               </Link>
 
               {logged ? (
-                <Link to="/" className="navbar__item --sign">
+                <Link
+                  to="/"
+                  className="navbar__item --sign"
+                  onClick={(e) => {
+                    signOut();
+                  }}
+                >
                   Sign Out
                 </Link>
               ) : (
@@ -130,11 +136,17 @@ export default function Navbar(props) {
             <FontAwesomeIcon className="navbar__icon" icon={faCartPlus} />
           </Link>
           {logged ? (
-            <Link to="/" className="navbar__item --sign">
+            <Link
+              to="/"
+              className="navbar__item --sign"
+              onClick={(e) => {
+                signOut();
+              }}
+            >
               <FontAwesomeIcon className="navbar__icon" icon={faSignOutAlt} />
             </Link>
           ) : (
-            <Link to="/" className="navbar__item --sign">
+            <Link to="/signIn" className="navbar__item --sign">
               <FontAwesomeIcon className="navbar__icon" icon={faSignInAlt} />
             </Link>
           )}

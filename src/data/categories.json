@@ -1,5 +1,14 @@
 [
     {
-        "category_name": "tops"
+        "category_name": "tops",
+        "category_id":1
+    },
+    {
+        "category_name": "bottoms",
+        "category_id":2
+    },
+    {
+        "category_name": "accessories",
+        "category_id":3
     }
 ]

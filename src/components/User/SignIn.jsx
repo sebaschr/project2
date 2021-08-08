@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../store/user/UserContext';
-import { useHistory } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../store/user/UserContext";
+import { useHistory } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
-import ProductsPage from '../Product/ProductsPage';
+import ProductsPage from "../Product/ProductsPage";
 
 export default function SignIn({ ...rest }) {
   const { verifyCredentials, checkIfSignedIn } = useContext(UserContext);
-  const [user, setUser] = useState('');
-  const [password, setPassword] = useState('');
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
   const [signed, setSigned] = useState(false);
 
   const [errorUser, setErrorUser] = useState(false);
@@ -20,7 +20,7 @@ export default function SignIn({ ...rest }) {
       setSigned(valid);
 
       if (valid) {
-        history.push('/products');
+        history.push("/products");
       }
     };
 
@@ -30,14 +30,14 @@ export default function SignIn({ ...rest }) {
 
   function validation() {
     let errors = false;
-    if (user === '') {
+    if (user === "") {
       setErrorUser(true);
       errors = true;
     } else {
       setErrorUser(false);
     }
 
-    if (password === '') {
+    if (password === "") {
       setErrorPw(true);
       errors = true;
     } else {
@@ -54,7 +54,7 @@ export default function SignIn({ ...rest }) {
       verified = verifyCredentials(user, password);
       if (verified) {
         setErrorCredentials(false);
-        history.push('/products');
+        history.push("/products");
       } else {
         setErrorCredentials(true);
       }
@@ -105,6 +105,9 @@ export default function SignIn({ ...rest }) {
                 <p className="form__error">Credentials are incorrect</p>
               )}
               <button className="form__button">Sign In</button>
+              <br />
+              <p>Don't have account yet?</p>
+              <Link to="/register">Register</Link>
             </form>
           </div>
         )

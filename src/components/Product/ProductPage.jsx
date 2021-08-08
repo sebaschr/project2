@@ -15,29 +15,33 @@ export default function ProductPage(props) {
   const { getProduct, products } = useContext(ProductContext);
   const { addToCart, checkIfAlreadyInCart, shoppingCart } =
     useContext(UserContext);
-  const [counter, setCounter] = useState(1);
+  const [taken, setTaken] = useState();
   const [inCart, setInCart] = useState(false);
-  const [taken, setTaken] = useState(null);
+  const [loading, setLoading] = useState(false);
+
   const [product, setProduct] = useState();
   const [items, setItems] = useState(0);
-
   useEffect(() => {
     let prod = getProduct(id);
     setProduct(prod);
-    let x = checkIfAlreadyInCart(prod.id);
+  }, [getProduct, id]);
+
+  useEffect(() => {
+    let x = checkIfAlreadyInCart(parseInt(id));
     if (x !== -1) {
       setTaken(shoppingCart[x].quantity);
       setInCart(true);
     } else {
       setTaken(1);
     }
-  }, [getProduct, id]);
+  }, [checkIfAlreadyInCart, id, shoppingCart]);
 
   function createItem() {
     let prod = {
       idProduct: product.id,
       quantity: items,
     };
+    setLoading(true);
     addToCart(prod);
   }
 
@@ -70,20 +74,30 @@ export default function ProductPage(props) {
             <p className="productPage__text">
               Price: <span className="productPage__span">${product.price}</span>
             </p>
+            <p className="productPage__text">
+              Available Units:{product.quantity}
+            </p>
           </div>
-          <button
-            className="products__button productPage__btn"
-            onClick={(e) => {
-              e.preventDefault();
-              createItem();
-              notify();
-            }}
+          <div
+            className="productPage__btns"
+            style={loading ? { opacity: 0.8 } : { opacity: 1 }}
           >
-            Add to Cart
-          </button>
-          <div>
-            <AddReduceBtn changeWord={(counter) => setCounter(counter)} />
+            <AddReduceBtn
+              quantity={product.quantity}
+              changeWord={(items) => setItems(items)}
+            />
             {inCart && <p>{taken} items in the cart already</p>}
+
+            <button
+              className="products__button productPage__btn"
+              onClick={(e) => {
+                e.preventDefault();
+                createItem();
+                notify();
+              }}
+            >
+              Add to Cart
+            </button>
           </div>
         </section>
       )}
