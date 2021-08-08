@@ -1,0 +1,147 @@
+@use "../abstracts/_breakpoints" as media;
+
+.navbar {
+  width: 90%;
+  padding: 2rem 0;
+  background-color: $wh;
+  transition: ease-in-out 0.5s;
+  margin: 0 auto;
+  &__content {
+    width: 80%;
+    display: flex;
+    color: $bl;
+    justify-content: space-between;
+    align-content: center;
+    margin: auto;
+  }
+  &__icon {
+    min-width: 21px;
+    font-size: 2rem;
+    font-weight: lighter;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    padding: 0;
+    justify-self: center;
+    align-self: center;
+  }
+  &__link {
+    color: $bl;
+    text-decoration: none;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    &:hover {
+      color: $gld;
+    }
+  }
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  &__links {
+    transition: ease-in-out 0.5s;
+
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    color: $bl;
+    text-decoration: none;
+    align-self: center;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+    &:hover {
+      color: $gld;
+      background-color: #fcfcfc;
+    }
+    &.--sign {
+      display: flex;
+      width: auto;
+      justify-content: center;
+      align-content: center;
+      align-self: center;
+    }
+  }
+}
+
+@include media.query('>lg') {
+  .navbar {
+    padding: 1rem 0;
+    margin: 0 auto;
+    box-shadow: 0 4px 2px -2px #fcfcfc;
+
+    width: 100%;
+    &__content {
+      width: 80%;
+      display: flex;
+      color: $bl;
+      justify-content: space-between;
+      align-content: center;
+      margin: auto;
+    }
+    &__icon {
+      min-width: 21px;
+      font-size: 2rem;
+      font-weight: lighter;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+    }
+    &__link {
+      color: $bl;
+      text-decoration: none;
+      align-self: center;
+      margin: 0;
+      padding: 0;
+      &:hover {
+        color: $gld;
+      }
+    }
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: bolder;
+      width: auto;
+    }
+
+    &__links {
+      transition: ease-in-out 0.5s;
+      width: 30%;
+      margin: auto;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-evenly;
+    }
+
+    &__item {
+      text-transform: uppercase;
+      color: $bl;
+      text-decoration: none;
+      align-self: center;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 1.3rem;
+      width: auto;
+      &:hover {
+        color: $gld;
+        background-color: transparent;
+      }
+      &.--sign {
+        width: 5vw;
+        margin: 0;
+        padding: 0;
+        font-weight: lighter;
+      }
+    }
+  }
+}

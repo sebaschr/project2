@@ -1,0 +1,25 @@
+@use "../abstracts/_breakpoints" as media;
+
+.images {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 40vh;
+  &__container {
+    height: 40vh;
+    width: 100%;
+  }
+
+  &__image {
+    height: 40vh;
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+}

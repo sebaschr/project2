@@ -1,0 +1,506 @@
+[
+    {
+        "id": 1,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 2,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 3,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 4,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 5,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 6,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 7,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 8,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 9,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 10,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 11,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 12,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 13,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 14,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 15,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 16,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 17,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 18,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 19,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 20,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 21,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 22,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 23,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 24,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 25,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 26,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 27,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 28,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 29,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 30,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 31,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 32,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 33,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 34,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 35,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    },
+    {
+        "id": 36,
+        "product_name": "Shirt",
+        "price": 12,
+        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
+        "colors": [
+            "red",
+            "blue",
+            "cream"
+        ],
+        "categories": [
+            1
+        ]
+    }
+]

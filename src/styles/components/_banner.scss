@@ -1,0 +1,90 @@
+@use "../abstracts/_breakpoints" as media;
+
+.banner {
+  &__container {
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: saturation;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    margin: 0;
+    padding: 0;
+
+    -webkit-filter: brightness(50%);
+    background-blend-mode: saturation;
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    &.--sm {
+      height: 18vh;
+    }
+  }
+
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  text-align: center;
+  color: $wh;
+  position: relative;
+  overflow-x: hidden;
+
+  &.--sm {
+    height: 18vh;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: bolder;
+  }
+  &__text {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+  }
+
+  &__button {
+    color: $wh;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: solid 2px white;
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: white;
+      color: $bl;
+    }
+  }
+}
+
+@include media.query('>=lg') {
+  .banner {
+    overflow-x: hidden;
+    width: 50%;
+    margin: auto;
+    height: 70vh;
+
+    &.--sm {
+      height: 25vh;
+    }
+    &__container {
+      overflow-x: hidden;
+      height: 70vh;
+
+      &.--sm {
+        height: 25vh;
+      }
+    }
+    &__title {
+      font-size: 10rem;
+    }
+
+    &__button {
+      padding: 2rem 4rem;
+    }
+  }
+}

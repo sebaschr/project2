@@ -1,0 +1,17 @@
+// ABSTRACT
+@import './abstracts/variables.scss';
+@import './abstracts/functions';
+
+// BASE
+@import './base/reset';
+
+// COMPONENTS
+@import './components/navbar';
+@import './components/banner';
+@import './components/quotes';
+@import './components/images';
+@import './components/productCard';
+@import './components/cartCard';
+@import './components/addReduceBtn';
+@import './components/product';
+@import './components/forms';

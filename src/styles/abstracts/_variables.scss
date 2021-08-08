@@ -1,0 +1,42 @@
+// Breakpoints
+$breakpoints: (
+  'sm': 768px,
+  'md': 1024px,
+  'lg': 1200px,
+  'xl': 1400px,
+);
+
+// Font Sizes
+$root-font-size: 16px;
+
+$mainFont: 'Roboto', sans-serif;
+
+$wavyblue: #3586ff;
+$gld: #fed600;
+$bl: #000;
+$wh: #fff;
+$rd: #c70039;
+$lightgrey: #ccc;
+$darkgrey: #555;
+
+body {
+  font-family: $mainFont;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 62.5rem;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -62.5rem;
+  }
+}

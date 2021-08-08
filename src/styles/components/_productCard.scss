@@ -1,0 +1,77 @@
+@use "../abstracts/_breakpoints" as media;
+
+.products {
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__card {
+    text-decoration: none;
+    color: $bl;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: ease-in-out 0.5s;
+    &:hover {
+      transition: ease-in-out 0.5s;
+      transform: scale(1.025);
+    }
+  }
+
+  &__image {
+    width: 75%;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+
+  &__button {
+    margin: 1rem auto 0 auto;
+    padding: 1rem 1.5rem;
+    width: 12rem;
+    border: solid 1px black;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $bl;
+      color: $wh;
+    }
+  }
+}
+
+@include media.query('>=sm') {
+  .products {
+    &__card {
+      width: 45%;
+    }
+  }
+}
+
+@include media.query('>=lg') {
+  .products {
+    &__card {
+      width: 24%;
+    }
+  }
+}

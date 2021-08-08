@@ -1,0 +1,18 @@
+.quotes {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+
+  &__title {
+    overflow: hidden;
+
+    font-size: 7rem;
+  }
+  &__text {
+    font-size: 1.3rem;
+  }
+}
