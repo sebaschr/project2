@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function ProductsPage(props) {
   const { product } = props;
   const link = '/products/item/' + product.id;
+  const [counter,setCounter] = useState(1)
   const [taken, setTaken] = useState(null);
   const [inCart, setInCart] = useState(false);
 
@@ -28,7 +29,7 @@ export default function ProductsPage(props) {
   function createItem() {
     let prod = {
       idProduct: product.id,
-      quantity: taken,
+      quantity: counter,
     };
     addToCart(prod);
   }
@@ -85,9 +86,7 @@ export default function ProductsPage(props) {
           <p>Please enter a quantity</p>
 
           <AddReduceBtn
-            quantity={product.quantity}
-            taken={taken}
-            changeWord={(taken) => setTaken(taken)}
+            changeWord={(counter) => setCounter(counter)}
           />
           {inCart && <p>{taken} items in the cart already</p>}
           <button

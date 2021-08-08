@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function AddReduceBtn(props) {
-  const { quantity, changeWord, taken } = props;
+  const { changeWord, taken } = props;
   const [items, setItems] = useState(taken || 1);
 
   return (
@@ -21,12 +21,9 @@ export default function AddReduceBtn(props) {
       <p className="addredbtn__text">{items}</p>
       <button
         className="addredbtn__button --right"
-        disabled={items >= 5 ? true : false}
         onClick={(e) => {
-          if (quantity > items) {
             setItems(items + 1);
             changeWord(items + 1);
-          }
         }}
       >
         +
