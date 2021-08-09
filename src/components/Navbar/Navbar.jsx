@@ -73,15 +73,36 @@ export default function Navbar(props) {
                 ALL
               </Link>
 
-              <Link to="/products?tops" className="navbar__item">
+              <Link
+                to={{
+                  pathname: '/products',
+                  search: '?=tops',
+                  state: 1,
+                }}
+                className="navbar__item"
+              >
                 TOPS
               </Link>
 
-              <Link to="/products?bottoms" className="navbar__item">
+              <Link
+                to={{
+                  pathname: '/products',
+                  search: '?=bottoms',
+                  state: 2,
+                }}
+                className="navbar__item"
+              >
                 BOTTOMS
               </Link>
 
-              <Link to="/products?accessories" className="navbar__item">
+              <Link
+                to={{
+                  pathname: '/products',
+                  search: '?=accessories',
+                  state: 3,
+                }}
+                className="navbar__item"
+              >
                 ACCESSORIES
               </Link>
 
@@ -125,11 +146,25 @@ export default function Navbar(props) {
               TOPS
             </Link>
 
-            <Link to="/products?bottoms" className="navbar__item">
+            <Link
+              to={{
+                pathname: '/products',
+                search: '?=bottoms',
+                state: 2,
+              }}
+              className="navbar__item"
+            >
               BOTTOMS
             </Link>
 
-            <Link to="/products?accessories" className="navbar__item">
+            <Link
+              to={{
+                pathname: '/products',
+                search: '?=accessories',
+                state: 3,
+              }}
+              className="navbar__item"
+            >
               ACCESSORIES
             </Link>
           </div>

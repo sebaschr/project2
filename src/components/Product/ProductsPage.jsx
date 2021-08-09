@@ -23,7 +23,12 @@ export default function ProductsPage(props) {
     } else {
       setProductsShowing(products);
     }
-  }, []);
+  }, [
+    getProductsFromCategory,
+    history.location.search,
+    history.location.state,
+    products,
+  ]);
 
   return (
     <>

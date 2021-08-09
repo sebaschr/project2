@@ -13,7 +13,9 @@ export default function ProductCartCard(props) {
       <div className="prodCart__content">
         <p className="prodCart__title">{product.product_name}</p>
         <div className="prodCart__desc">
-          <p className="prodCart__text">Unit Price: ${product.price}</p>
+          <p className="products__text">
+            Unit price: <span className="products__span">${product.price}</span>
+          </p>
         </div>
 
         <button
@@ -26,16 +28,17 @@ export default function ProductCartCard(props) {
           Remove from Cart
         </button>
       </div>
+      <div className="prodCart__pricing">
+        <AddReduceBtn
+          taken={counter}
+          changeWord={(counter) => setCounter(counter)}
+        />
 
-      <AddReduceBtn
-        taken={counter}
-        changeWord={(counter) => setCounter(counter)}
-      />
-
-      <p className="prodCart__price">
-        Price:
-        <span className="prodCart__span">${product.price * counter}</span>
-      </p>
+        <p className="prodCart__price">
+          Price:
+          <span className="prodCart__span">${product.price * counter}</span>
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,57 +1,21 @@
 @use "../abstracts/_breakpoints" as media;
-
-.indivProd {
-  &__related {
-    width: 90%;
-    margin: auto;
-  }
-  &__links {
-    width: 90%;
-    margin: 2rem auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__link {
-    align-self: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: $bl;
-    &:hover {
-      color: purple;
-    }
-  }
-
-  &__title {
-    font-size: 2rem;
-    font-weight: bolder;
-  }
-
-  &__icon {
-    font-size: 1.1rem;
-    margin-right: 0.2rem;
-  }
-}
 .prodCart {
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
-  text-align: center;
+  text-align: left;
+
   &__image {
     width: 100%;
     object-fit: cover;
-    height: 25vh;
   }
 
   &__content {
-    width: 90%;
-    margin: auto;
+    margin: 2rem 0;
   }
 
   &__title {
-    font-size: 5rem;
-    margin: 1rem 0;
+    font-size: 3rem;
+    font-weight: 800;
   }
 
   &__text {
@@ -59,13 +23,17 @@
   }
   &__price {
     margin-top: 2rem;
-    text-align: center;
   }
 
   &__span {
     font-size: 3rem;
     justify-content: center;
     align-self: center;
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-around;
   }
 
   &__button {
@@ -128,38 +96,40 @@
   }
 }
 
-@include media.query('>sm') {
-  .indivProd {
-    &__related {
-      width: 85%;
-      margin: auto;
-
-      border-radius: 5px;
-    }
-    &__links {
-      width: 85%;
+@include media.query('>=sm') {
+  .prodCart {
+    &__pricing {
+      justify-content: space-between;
     }
   }
-
+}
+@include media.query('>lg') {
   .prodCart {
     display: flex;
     flex-direction: row;
+    width: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
       rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     justify-content: space-between;
     margin: 1rem 0;
+    padding-right: 5rem;
     &__image {
       width: 40%;
+      height: 30vh;
     }
     &__content {
-      width: 20%;
+      width: 25%;
       margin: auto 0;
       padding: 0;
     }
-    &__price {
-      align-self: center;
-      margin-right: 5rem;
-      text-align: center;
+    &__pricing {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__container {
+      width: 90%;
+      margin: auto;
     }
   }
 
@@ -168,16 +138,5 @@
     flex-direction: row;
     justify-content: space-around;
     width: 55%;
-  }
-}
-
-@include media.query('>lg') {
-  .indivProd {
-    &__related {
-      width: 65%;
-    }
-    &__links {
-      width: 65%;
-    }
   }
 }

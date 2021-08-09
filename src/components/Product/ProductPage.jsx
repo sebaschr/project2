@@ -21,7 +21,7 @@ export default function ProductPage(props) {
   const [loading, setLoading] = useState(false);
 
   const [product, setProduct] = useState();
-  const [items, setItems] = useState(0);
+  const [items, setItems] = useState(1);
   useEffect(() => {
     let prod = getProduct(id);
     setProduct(prod);
@@ -30,7 +30,7 @@ export default function ProductPage(props) {
   useEffect(() => {
     let x = checkIfAlreadyInCart(parseInt(id));
     if (x !== -1) {
-      setTaken(shoppingCart[x].quantity);
+      setTaken(shoppingCart[x].quantity || 1);
       setInCart(true);
     } else {
       setTaken(1);
@@ -60,7 +60,6 @@ export default function ProductPage(props) {
   return (
     <>
       <Navbar />
-      <Banner img="https://wallpaperaccess.com/full/221878.jpg" size />
       <div className="indivProd__links">
         <Link to="/products" className="indivProd__link">
           <FontAwesomeIcon className="indivProd__icon" icon={faChevronLeft} />{' '}
@@ -69,14 +68,15 @@ export default function ProductPage(props) {
       </div>
       {product && (
         <section className="productPage">
-          <img src={product.image} alt="" className="productPage__img" />
+          <img
+            src={product.image}
+            alt={product.product_name}
+            className="productPage__image"
+          />
           <div className="productPage__content">
             <h2 className="productPage__title">{product.product_name}</h2>
-            <p className="productPage__text">
-              Price: <span className="productPage__span">${product.price}</span>
-            </p>
-            <p className="productPage__text">
-              Available Units:{product.quantity}
+            <p className="products__text">
+              Price: <span className="products__span">${product.price}</span>
             </p>
           </div>
           <div

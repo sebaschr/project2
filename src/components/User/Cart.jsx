@@ -33,7 +33,7 @@ export default function Cart() {
         <h2 className="indivProd__title">Shopping Cart</h2>
       </div>
 
-      <div className="indivProd__related">
+      <div className="prodCart__container">
         {cartProds.length > 0 ? (
           cartProds.map((prod, key) => {
             return (

@@ -1,0 +1,33 @@
+.indivProd {
+  &__related {
+    width: 90%;
+    margin: auto;
+  }
+  &__links {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    align-self: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: $bl;
+    &:hover {
+      color: purple;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  &__icon {
+    font-size: 1.1rem;
+    margin-right: 0.2rem;
+  }
+}
