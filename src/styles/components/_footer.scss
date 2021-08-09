@@ -1,6 +1,9 @@
 @use "../abstracts/_breakpoints" as media;
 
 .footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background-color: $bl;
   color: $wh;
   padding: 2rem 0;

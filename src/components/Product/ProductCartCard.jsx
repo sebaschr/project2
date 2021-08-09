@@ -1,15 +1,20 @@
 import React, { useContext, useState } from 'react';
 import AddReduceBtn from './AddReduceBtn';
 import { UserContext } from '../../store/user/UserContext';
+import { useEffect } from 'react';
 export default function ProductCartCard(props) {
-  const { removeFromCart } = useContext(UserContext);
+  const { removeFromCart, updateQuantity } = useContext(UserContext);
 
   const { product, prodCartID, prodsInCart } = props;
   const [counter, setCounter] = useState(prodsInCart || 1);
 
   return (
     <div className="prodCart">
-      <img className="prodCart__image" src={product.image} alt="" />
+      <img
+        className="prodCart__image"
+        src={product.image}
+        alt={product.product_name}
+      />
       <div className="prodCart__content">
         <p className="prodCart__title">{product.product_name}</p>
         <div className="prodCart__desc">
@@ -31,7 +36,10 @@ export default function ProductCartCard(props) {
       <div className="prodCart__pricing">
         <AddReduceBtn
           taken={counter}
-          changeWord={(counter) => setCounter(counter)}
+          changeWord={(counter) => {
+            setCounter(counter);
+            updateQuantity(prodCartID, counter);
+          }}
         />
 
         <p className="prodCart__price">

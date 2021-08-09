@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../store/user/UserContext';
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   faBars,
   faTimes,
@@ -8,9 +8,10 @@ import {
   faSignOutAlt,
   faSignInAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { checkIfSignedIn, signOut } from '../../services/user-service';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Navbar(props) {
-  const { checkIfSignedIn, signOut } = useContext(UserContext);
+  const { clearCart } = useContext(UserContext);
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
@@ -45,16 +46,28 @@ export default function Navbar(props) {
           <div className="navbar__content">
             {isOpen ? (
               <FontAwesomeIcon
+                tabIndex="1"
                 className="navbar__icon"
                 icon={faTimes}
                 onClick={(e) => {
                   setIsOpen(false);
                 }}
+                onKeyDown={(e) => {
+                  if (e.keyCode === 13) {
+                    setIsOpen(false);
+                  }
+                }}
               />
             ) : (
               <FontAwesomeIcon
+                tabIndex="1"
                 className="navbar__icon"
                 icon={faBars}
+                onKeyDown={(e) => {
+                  if (e.keyCode === 13) {
+                    setIsOpen(true);
+                  }
+                }}
                 onClick={(e) => {
                   setIsOpen(true);
                 }}
@@ -112,6 +125,8 @@ export default function Navbar(props) {
                   className="navbar__item --sign"
                   onClick={(e) => {
                     signOut();
+                    clearCart();
+                    window.location.reload();
                   }}
                 >
                   Sign Out
@@ -177,6 +192,8 @@ export default function Navbar(props) {
               className="navbar__item --sign"
               onClick={(e) => {
                 signOut();
+                clearCart();
+                window.location.reload();
               }}
             >
               <FontAwesomeIcon className="navbar__icon" icon={faSignOutAlt} />

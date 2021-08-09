@@ -1,10 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../store/user/UserContext';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import { checkIfSignedIn, register } from '../../services/user-service';
+import useDebounce from '../../hooks/useDebounce';
 
 export default function SignUp({ ...rest }) {
-  const { checkIfSignedIn } = useContext(UserContext);
+  const debouncedValue = useDebounce('', 3000);
 
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
@@ -13,12 +16,14 @@ export default function SignUp({ ...rest }) {
   const [email, setEmail] = useState('');
 
   const [signed, setSigned] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [errorUser, setErrorUser] = useState(false);
   const [errorPw, setErrorPw] = useState(false);
   const [errorName, setErrorName] = useState(false);
   const [errorLastName, setErrorLastName] = useState(false);
   const [errorEmail, setErrorEmail] = useState(false);
+  const [errorRegister, setErrorRegister] = useState(false);
 
   useEffect(() => {
     const checkUser = () => {
@@ -87,6 +92,17 @@ export default function SignUp({ ...rest }) {
     event.preventDefault();
     const errors = validation();
     if (!errors) {
+      let registerFailed = register(firstName, lastName, email, password, user);
+      if (!registerFailed) {
+        setErrorRegister(true);
+      } else {
+        setErrorRegister(false);
+        setTimeout(() => {
+          setLoading(true);
+          history.push('/signin');
+        }, 1500);
+      }
+      //pName, pLastName, pEmail, pPassword, pUserName
     }
   }
 
@@ -97,86 +113,122 @@ export default function SignUp({ ...rest }) {
         signed ? (
           {}
         ) : (
-          <div className="form">
-            <form className="form__card" onSubmit={handleSubmit}>
-              <h2 className="form__title">Log In</h2>
-              <label htmlFor="first_name">First Name: </label>
-              <input
-                className="input"
-                type="text"
-                id="first_name"
-                name="first_name"
-                value={firstName}
-                onChange={(e) => {
-                  setFirstName(e.target.value);
-                }}
-              />
-              {errorName && (
-                <p className="form__error">Please enter a First Name</p>
-              )}
+          <>
+            <Navbar />
+            <div className="form">
+              <form className="form__card" onSubmit={handleSubmit}>
+                {loading ? (
+                  <div className="lds-spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                ) : (
+                  <>
+                    <h2 className="form__title">Sign Up</h2>
+                    <label className="form__label" htmlFor="first_name">
+                      First Name:{' '}
+                    </label>
+                    <input
+                      className="form__input"
+                      type="text"
+                      id="first_name"
+                      name="first_name"
+                      value={firstName}
+                      onChange={(e) => {
+                        setFirstName(e.target.value);
+                      }}
+                    />
+                    {errorName && (
+                      <p className="form__error">Please enter a First Name</p>
+                    )}
 
-              <label htmlFor="last_name">Last Name: </label>
-              <input
-                className="input"
-                type="text"
-                id="last_name"
-                name="last_name"
-                value={lastName}
-                onChange={(e) => {
-                  setLastName(e.target.value);
-                }}
-              />
-              {errorLastName && (
-                <p className="form__error">Please enter a Last Name</p>
-              )}
+                    <label className="form__label" htmlFor="last_name">
+                      Last Name:{' '}
+                    </label>
+                    <input
+                      className="form__input"
+                      type="text"
+                      id="last_name"
+                      name="last_name"
+                      value={lastName}
+                      onChange={(e) => {
+                        setLastName(e.target.value);
+                      }}
+                    />
+                    {errorLastName && (
+                      <p className="form__error">Please enter a Last Name</p>
+                    )}
 
-              <label htmlFor="email">E-Mail: </label>
-              <input
-                className="input"
-                type="text"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-              {errorEmail && (
-                <p className="form__error">Please enter a valid email</p>
-              )}
+                    <label className="form__label" htmlFor="email">
+                      E-Mail:{' '}
+                    </label>
+                    <input
+                      className="form__input"
+                      type="text"
+                      id="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
+                    />
+                    {errorEmail && (
+                      <p className="form__error">Please enter a valid email</p>
+                    )}
 
-              <label htmlFor="username">Username: </label>
-              <input
-                className="input"
-                type="text"
-                id="username"
-                name="username"
-                value={user}
-                onChange={(e) => {
-                  setUser(e.target.value);
-                }}
-              />
-              {errorUser && (
-                <p className="form__error">Please enter an Username</p>
-              )}
+                    <label className="form__label" htmlFor="username">
+                      Username:{' '}
+                    </label>
+                    <input
+                      className="form__input"
+                      type="text"
+                      id="username"
+                      name="username"
+                      value={user}
+                      onChange={(e) => {
+                        setUser(e.target.value);
+                      }}
+                    />
+                    {errorUser && (
+                      <p className="form__error">Please enter an Username</p>
+                    )}
 
-              <label htmlFor="password">Password: </label>
-              <input
-                className="input"
-                type="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-              {errorPw && (
-                <p className="form__error">Please enter a Password</p>
-              )}
-              <button className="form__button">Register</button>
-            </form>
-          </div>
+                    <label className="form__label" htmlFor="password">
+                      Password:{' '}
+                    </label>
+                    <input
+                      className="form__input"
+                      type="password"
+                      id="password"
+                      name="password"
+                      value={password}
+                      onChange={(e) => {
+                        setPassword(e.target.value);
+                      }}
+                    />
+                    {errorPw && (
+                      <p className="form__error">Please enter a Password</p>
+                    )}
+                    {errorRegister && (
+                      <p className="form__error">Username already exists.</p>
+                    )}
+                    <button className="form__button">Register</button>
+                  </>
+                )}
+              </form>
+            </div>
+            <Footer />
+          </>
         )
       }
     />

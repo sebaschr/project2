@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
-import { UserContext } from '../../store/user/UserContext';
+import { checkIfSignedIn, signOut } from '../../services/user-service';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { UserContext } from '../../store/user/UserContext';
 import {
   faTwitter,
   faInstagram,
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 export default function Footer(props) {
-  const { checkIfSignedIn, signOut } = useContext(UserContext);
+  const { clearCart } = useContext(UserContext);
   const [logged, setLogged] = useState();
   useEffect(() => {
     let auth = checkIfSignedIn();
@@ -20,16 +21,37 @@ export default function Footer(props) {
         <Link className="footer__link" to="/">
           ALL
         </Link>
-        <Link className="footer__link" to="/">
+        <Link
+          to={{
+            pathname: '/products',
+            search: '?=tops',
+            state: 1,
+          }}
+          className="footer__link"
+        >
           TOPS
         </Link>
-        <Link className="footer__link" to="/">
+        <Link
+          to={{
+            pathname: '/products',
+            search: '?=bottoms',
+            state: 2,
+          }}
+          className="footer__link"
+        >
           BOTTOM
         </Link>
-        <Link className="footer__link" to="/">
+        <Link
+          to={{
+            pathname: '/products',
+            search: '?=accessories',
+            state: 3,
+          }}
+          className="footer__link"
+        >
           ACCESSORIES
         </Link>
-        <Link className="footer__link" to="/">
+        <Link className="footer__link" to="/cart">
           SHOPPING CART
         </Link>
         {logged ? (
@@ -38,6 +60,8 @@ export default function Footer(props) {
             className="footer__link --sign"
             onClick={(e) => {
               signOut();
+              clearCart();
+              window.location.reload();
             }}
           >
             Sign Out

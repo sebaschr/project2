@@ -13,7 +13,7 @@ export default function LandingPage(props) {
         <p className="banner__text">{text}</p>
 
         {props.button && (
-          <Link to="/">
+          <Link to="/products">
             <button className="banner__button">{props.button}</button>
           </Link>
         )}

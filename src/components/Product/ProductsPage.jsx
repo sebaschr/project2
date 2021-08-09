@@ -30,6 +30,7 @@ export default function ProductsPage(props) {
     products,
   ]);
 
+  console.log(categories);
   return (
     <>
       <Navbar />

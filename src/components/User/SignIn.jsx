@@ -1,13 +1,21 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../store/user/UserContext';
 import { useHistory } from 'react-router-dom';
 import { Route, Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import { UserContext } from '../../store/user/UserContext';
+import {
+  checkIfSignedIn,
+  verifyCredentials,
+  signIn,
+} from '../../services/user-service';
 
 export default function SignIn({ ...rest }) {
-  const { verifyCredentials, checkIfSignedIn } = useContext(UserContext);
+  const { loadCart } = useContext(UserContext);
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [signed, setSigned] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [errorUser, setErrorUser] = useState(false);
   const [errorPw, setErrorPw] = useState(false);
@@ -52,7 +60,11 @@ export default function SignIn({ ...rest }) {
       verified = verifyCredentials(user, password);
       if (verified) {
         setErrorCredentials(false);
-        history.push('/products');
+        setLoading(true);
+        loadCart();
+        setTimeout(() => {
+          history.push('/products');
+        }, 1500);
       } else {
         setErrorCredentials(true);
       }
@@ -66,48 +78,63 @@ export default function SignIn({ ...rest }) {
         signed ? (
           {}
         ) : (
-          <div className="form">
-            <form className="form__card" onSubmit={handleSubmit}>
-              <h2 className="form__title">Log In</h2>
-              <label htmlFor="username">Username: </label>
-              <input
-                className="input"
-                type="text"
-                id="username"
-                name="username"
-                value={user}
-                onChange={(e) => {
-                  setUser(e.target.value);
-                }}
-              />
-              {errorUser && (
-                <p className="form__error">Please enter an Username</p>
-              )}
+          <>
+            <Navbar />
+            <div className="form">
+              <form className="form__card" onSubmit={handleSubmit}>
+                <h2 className="form__title">Log In</h2>
+                <label htmlFor="username" className="form__label">
+                  Username:{' '}
+                </label>
+                <input
+                  className={!errorUser ? 'form__input' : 'form__input --error'}
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={user}
+                  onChange={(e) => {
+                    setUser(e.target.value);
+                  }}
+                />
+                {errorUser && (
+                  <p className="form__error">Please enter an Username</p>
+                )}
 
-              <label htmlFor="password">Password: </label>
-              <input
-                className="input"
-                type="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-              {errorPw && (
-                <p className="form__error">Please enter a Password</p>
-              )}
+                <label htmlFor="password" className="form__label">
+                  Password:{' '}
+                </label>
+                <input
+                  className={!errorPw ? 'form__input' : 'form__input --error'}
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+                {errorPw && (
+                  <p className="form__error">Please enter a Password</p>
+                )}
 
-              {errorCredentials && (
-                <p className="form__error">Credentials are incorrect</p>
-              )}
-              <button className="form__button">Sign In</button>
-              <br />
-              <p>Don't have account yet?</p>
-              <Link to="/register">Register</Link>
-            </form>
-          </div>
+                {errorCredentials && (
+                  <p className="form__error">Credentials are incorrect</p>
+                )}
+                <button
+                  disabled={loading ? true : false}
+                  className="form__button"
+                >
+                  Sign In
+                </button>
+                <br />
+                <p>Don't have account yet?</p>
+                <Link to="/register" className="form__link">
+                  Register
+                </Link>
+              </form>
+            </div>
+            <Footer />
+          </>
         )
       }
     />

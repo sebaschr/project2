@@ -2,9 +2,9 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Route } from 'react-router-dom';
 import { UserContext } from '../../store/user/UserContext';
 import SignIn from '../User/SignIn';
+import { checkIfSignedIn, signOut } from '../../services/user-service';
 
 export const ProtectedRoute = ({ component: Component, ...rest }) => {
-  const { checkIfSignedIn } = useContext(UserContext);
   const [signed, setSigned] = useState(false);
   useEffect(() => {
     const checkUser = () => {

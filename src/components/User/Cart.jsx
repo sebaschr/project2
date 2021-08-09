@@ -9,6 +9,7 @@ import { ProductContext } from '../../store/product/ProductContext';
 
 import ProductCartCard from '../Product/ProductCartCard';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../Footer/Footer';
 export default function Cart() {
   const { shoppingCart } = useContext(UserContext);
   const { getProduct } = useContext(ProductContext);
@@ -71,6 +72,8 @@ export default function Cart() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

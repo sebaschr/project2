@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import Banner from '../General/Banner';
 import ProductCard from './ProductCard';
 import AddReduceBtn from './AddReduceBtn';
 import { ProductContext } from '../../store/product/ProductContext';
