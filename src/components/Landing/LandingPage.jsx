@@ -1,7 +1,7 @@
 import Navbar from '../Navbar/Navbar';
 import Banner from '../General/Banner';
 import Footer from '../Footer/Footer';
-import InformationBanner from '../InformationBanner';
+import InformationBanner from '../InformationBanner/InformationBanner';
 
 export default function LandingPage() {
   return (
