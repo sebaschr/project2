@@ -104,9 +104,12 @@ export default function ProductPage(props) {
       <h2 className="productPage__title --big">Related Products</h2>
       <div className="productPage__related">
         {products.length > 0 ? (
-          products.slice(0, 4).map((prod, key) => {
-            return <ProductCard product={prod} key={prod.id} />;
-          })
+          products
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 4)
+            .map((prod, key) => {
+              return <ProductCard product={prod} key={prod.id} />;
+            })
         ) : (
           <h1>Empty</h1>
         )}
