@@ -1,0 +1,101 @@
+@use "../abstracts/_breakpoints" as media;
+
+.footer {
+  background-color: $bl;
+  color: $wh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  &__links {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+  &__link {
+    color: $wh;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0.7rem 0;
+    &:hover {
+      color: $gld;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: solid 1px $wh;
+    width: 75%;
+    margin: auto;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    border-color: transparent;
+    color: $wh;
+    padding: 0.7rem;
+    &:hover {
+      color: $gld;
+    }
+  }
+  &__socialsDiv {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 10rem;
+    margin: 2rem auto 0 auto;
+  }
+
+  &__socials {
+    color: $wh;
+    font-size: 2rem;
+    &:hover {
+      color: $lightgrey;
+      opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    margin: 0 1.1rem;
+  }
+}
+
+@include media.query('>=sm') {
+  .footer {
+    width: 100%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    &__links {
+      margin: 0;
+      padding: 0;
+      width: 20%;
+    }
+    &__socialsDiv {
+      margin: 0;
+      margin-left: 5rem;
+      padding: 0;
+      width: 20%;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+}
+
+@include media.query('>=lg') {
+  .footer {
+    padding: 3rem 0;
+    &__links {
+      flex-direction: row;
+      width: 50%;
+    }
+    &__link,
+    &__icon {
+      align-self: center;
+      margin: 0 2rem;
+    }
+  }
+}

@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../store/user/UserContext";
-import { useHistory, Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../store/user/UserContext';
+import { useHistory, Link } from 'react-router-dom';
 import {
   faBars,
   faTimes,
   faCartPlus,
   faSignOutAlt,
   faSignInAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Navbar(props) {
   const { checkIfSignedIn, signOut } = useContext(UserContext);
   const [windowDimensions, setWindowDimensions] = useState(
@@ -27,14 +27,13 @@ export default function Navbar(props) {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
 
   const [logged, setLogged] = useState();
-  const history = useHistory();
   useEffect(() => {
     let auth = checkIfSignedIn();
     setLogged(auth);
@@ -62,7 +61,7 @@ export default function Navbar(props) {
               />
             )}
             <Link to="/" className="navbar__link navbar__logo">
-              Sloth & Co
+              ad meliora.
             </Link>
             <Link to="/cart" className="navbar__item --sign">
               <FontAwesomeIcon className="navbar__icon" icon={faCartPlus} />
@@ -74,15 +73,15 @@ export default function Navbar(props) {
                 ALL
               </Link>
 
-              <Link to="/" className="navbar__item">
+              <Link to="/products?tops" className="navbar__item">
                 TOPS
               </Link>
 
-              <Link to="/" className="navbar__item">
+              <Link to="/products?bottoms" className="navbar__item">
                 BOTTOMS
               </Link>
 
-              <Link to="/" className="navbar__item">
+              <Link to="/products?accessories" className="navbar__item">
                 ACCESSORIES
               </Link>
 
@@ -97,12 +96,7 @@ export default function Navbar(props) {
                   Sign Out
                 </Link>
               ) : (
-                <Link
-                  className="navbar__button"
-                  onClick={(e) => {
-                    history.push(`/signin`);
-                  }}
-                >
+                <Link to="/signin" className="navbar__item --sign">
                   Sign In
                 </Link>
               )}
@@ -112,7 +106,7 @@ export default function Navbar(props) {
       ) : (
         <div className="navbar__content">
           <Link to="/" className="navbar__link navbar__logo">
-            Sloth & Co
+            ad meliora.
           </Link>
 
           <div className="navbar__links">
@@ -120,15 +114,22 @@ export default function Navbar(props) {
               ALL
             </Link>
 
-            <Link to="/" className="navbar__item">
+            <Link
+              to={{
+                pathname: '/products',
+                search: '?=tops',
+                state: 1,
+              }}
+              className="navbar__item"
+            >
               TOPS
             </Link>
 
-            <Link to="/" className="navbar__item">
+            <Link to="/products?bottoms" className="navbar__item">
               BOTTOMS
             </Link>
 
-            <Link to="/" className="navbar__item">
+            <Link to="/products?accessories" className="navbar__item">
               ACCESSORIES
             </Link>
           </div>

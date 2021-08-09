@@ -4,8 +4,8 @@ import { UserContext } from '../../store/user/UserContext';
 export default function ProductCartCard(props) {
   const { removeFromCart } = useContext(UserContext);
 
-  const { product, prodCartID } = props;
-  const [counter, setCounter] = useState(product.prodsInCart);
+  const { product, prodCartID, prodsInCart } = props;
+  const [counter, setCounter] = useState(prodsInCart || 1);
 
   return (
     <div className="prodCart">
@@ -28,13 +28,12 @@ export default function ProductCartCard(props) {
       </div>
 
       <AddReduceBtn
-        quantity={product.quantity}
-        taken={product.prodsInCart}
+        taken={counter}
         changeWord={(counter) => setCounter(counter)}
       />
 
       <p className="prodCart__price">
-        Price:{' '}
+        Price:
         <span className="prodCart__span">${product.price * counter}</span>
       </p>
     </div>

@@ -39,6 +39,7 @@ export default function Cart() {
             return (
               <ProductCartCard
                 product={prod}
+                prodsInCart={prod.prodsInCart}
                 prodCartID={prod.cartID}
                 key={key}
               />
@@ -51,7 +52,7 @@ export default function Cart() {
 
       <div className="btnsDiv">
         <div className="btnsDiv__child">
-          <Link to="/">
+          <Link to="/checkout">
             <button className="btnsDiv__button">Check Out As Guest</button>
           </Link>
         </div>

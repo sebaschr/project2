@@ -1,69 +1,97 @@
 @use "../abstracts/_breakpoints" as media;
 
 .products {
-  width: 90%;
+  width: 100%;
   margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
   max-width: 1500px;
 
+  &__selector {
+    width: 90%;
+    margin: auto;
+    max-width: 1500px;
+  }
   &__container {
     width: 100%;
   }
 
+  &__select {
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-family: $mainFont;
+    border-radius: 0;
+  }
+  &__option {
+    overflow-y: hidden;
+    width: 100%;
+  }
   &__card {
     text-decoration: none;
     color: $bl;
     cursor: pointer;
     text-align: center;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    width: 90%;
-    margin: 1rem auto;
+    width: 100%;
+    margin: 0;
     padding: 2rem 0;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    transition: ease-in-out 0.5s;
+    opacity: 0.9;
     &:hover {
       transition: ease-in-out 0.5s;
-      transform: scale(1.025);
+      opacity: 1;
     }
   }
-
   &__image {
-    width: 75%;
+    width: 100%;
     margin: auto;
     object-fit: cover;
   }
-
   &__title {
     font-weight: 900;
-    font-size: 1.3rem;
-    margin: 0.5rem 0;
+    font-size: 2rem;
+    margin: 1rem 0;
   }
-
+  &__text {
+    font-size: 1.2rem;
+  }
+  &__span {
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
   &__button {
+    font-family: $mainFont;
     margin: 1rem auto 0 auto;
     padding: 1rem 1.5rem;
     width: 12rem;
-    border: solid 1px black;
+    border: solid 0.5px black;
     background: transparent;
-    border-radius: 5px;
     cursor: pointer;
     &:hover {
       background-color: $bl;
       color: $wh;
     }
+    &.--full {
+      width: 100%;
+    }
+  }
+
+  &__cartdisc {
+    margin: 1rem 0 2rem 0;
   }
 }
 
 @include media.query('>=sm') {
   .products {
     &__card {
-      width: 45%;
+      width: 50%;
+    }
+    &__selector {
+      width: 50%;
+      margin: auto;
     }
   }
 }
@@ -71,7 +99,10 @@
 @include media.query('>=lg') {
   .products {
     &__card {
-      width: 24%;
+      width: 25%;
+    }
+    &__selector {
+      width: 25%;
     }
   }
 }

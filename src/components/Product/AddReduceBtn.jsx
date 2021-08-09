@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function AddReduceBtn(props) {
   const { changeWord, taken } = props;
-  const [items, setItems] = useState(1);
+  const [items, setItems] = useState(taken || 1);
 
   return (
     <div className="addredbtn">

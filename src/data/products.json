@@ -1,504 +1,324 @@
 [
     {
         "id": 1,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Overgrown Hoodie",
+        "price": 75,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/Untitled-2_0f8e9acb-9ee3-414d-86ec-9189dbba7bcf_x1440.jpg?v=1571274632",
         "categories": [
             1
         ]
     },
     {
         "id": 2,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Colour Crew",
+        "price": 70,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/4_fdd62a35-41fa-4125-9d6c-a2fae5225419_x1440.jpg?v=1602223502",
         "categories": [
             1
         ]
     },
     {
         "id": 3,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Press Start Knit",
+        "price": 45,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/ALT_8a069c67-de41-4c8d-8635-f2c09624f5ac_x1440.jpg?v=1571274630",
         "categories": [
             1
         ]
     },
     {
         "id": 4,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Doodle Hoodie",
+        "price": 75,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_8029c9e4-773b-422a-878e-8fb8affff096_x1440.jpg?v=1602225892",
         "categories": [
             1
         ]
     },
     {
         "id": 5,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Fire Beanie",
+        "price": 20,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/cumlolwhyyoureadinfilenamesbro_x1440.png?v=1617198395",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 6,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Mood Bucket Hat",
+        "price": 30,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/PLACEHOLDER_28ddad31-c057-43e2-a530-8ae8970217ba_x1440.jpg?v=1602255941",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 7,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Doodle Cap",
+        "price": 25,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_6c7f57d2-528a-4eb5-86eb-b1af3cac5e98_x1440.jpg?v=1601535724",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 8,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Cool Beanie",
+        "price": 20,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_5975261e-a6a6-41e8-a0fb-9f96ab5fcf81_x1440.jpg?v=1571274620",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 9,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Flower Pin",
+        "price": 5,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/CARD_c18a23fe-a65e-47ad-a10c-c3fc068fe099_x1440.jpg?v=1601879861",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 10,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Pockets Tee",
+        "price": 40,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/hero_f700c3b7-b05e-49ae-b035-d876afcb18bd_x1440.jpg?v=1617191384",
         "categories": [
             1
         ]
     },
     {
         "id": 11,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Mood Tee",
+        "price": 40,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/FLAT_x1440.jpg?v=1602156250",
         "categories": [
             1
         ]
     },
     {
         "id": 12,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Pain Tee",
+        "price": 40,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/FRONT_4578fa2f-d14e-4941-8590-27a429a0217a_x1440.jpg?v=1602338951",
         "categories": [
             1
         ]
     },
     {
         "id": 13,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Basic Tee",
+        "price": 35,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/BLACK-HERO_x1440.jpg?v=1571274629",
         "categories": [
             1
         ]
     },
     {
         "id": 14,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Doodle Chill Pant",
+        "price": 50,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/4_667b4cee-1451-4469-baf5-d02fa6df4a0f_x1440.jpg?v=1602214015",
         "categories": [
-            1
+            2
         ]
     },
     {
         "id": 15,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Blackout Chill Pant",
+        "price": 45,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/4_e396b73d-616c-459d-a0b9-ef219406a00a_x1440.jpg?v=1602220796",
         "categories": [
-            1
+            2
         ]
     },
     {
         "id": 16,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Happy Ending Chill Pant",
+        "price": 50,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_7f140c04-5ca2-4732-a531-721b5ef65deb_x1440.jpg?v=1602212832",
         "categories": [
-            1
+            2
         ]
     },
     {
         "id": 17,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Corporate Mask",
+        "price": 18,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/TEMPLATE_43c84ce9-51a9-4145-b627-b78c44ce8f5c_x1440.png?v=1597996205",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 18,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Metal Mask",
+        "price": 18,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/1_ac81925e-a8f0-49be-a8c0-ce9b821bec6b_x1440.jpg?v=1599812057",
         "categories": [
             1
         ]
     },
     {
         "id": 19,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Smiley Mask",
+        "price": 18,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/1_c6f9ea42-b4a4-4bb1-9c7f-83f2d2f1bb0d_x1440.jpg?v=1599814904",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 20,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Happy Ending Cap",
+        "price": 28,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/RIGHT-PROFILE_x1440.jpg?v=1602301194",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 21,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Coolboy Mask",
+        "price": 18,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/ALT_aca23dff-d89b-4168-a896-27cbbc2fadd4_x1440.jpg?v=1622792873",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 22,
-        "product_name": "Shirt",
+        "product_name": "The Coolmas Scart",
         "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/TEMPLATE1-Recovered-2_x1440.jpg?v=1607500024",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 23,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Fatali Tee",
+        "price": 35,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/alt_43e2a758-f328-496c-a20c-dad9cafccb1f_x1440.jpg?v=1602234559",
         "categories": [
             1
         ]
     },
     {
         "id": 24,
-        "product_name": "Shirt",
+        "product_name": "The Skelly Meanie",
         "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/ALT_f84df35c-23c5-44ca-bcb7-034e4168d13f_x1440.jpg?v=1571745289",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 25,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Cool Chain",
+        "price": 15,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/ALT_a69c38b9-fa7a-4dd6-b5e0-382d3e6e64d9_x1440.jpg?v=1571274632",
         "categories": [
-            1
+            3
         ]
     },
     {
         "id": 26,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The BubbleGum Pant",
+        "price": 52,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/2_f53669d1-0d73-48bc-8410-fce4d13125bb_x1440.jpg?v=1602215915",
         "categories": [
-            1
+            2
         ]
     },
     {
         "id": 27,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Corporate Turtleneck",
+        "price": 70,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/s_x1440.jpg?v=1571274630",
         "categories": [
             1
         ]
     },
     {
         "id": 28,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Candy Shirt",
+        "price": 45,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/FLAT_2e434a46-3425-4c64-a87d-a14aec24d15f_x1440.jpg?v=1602160461",
         "categories": [
             1
         ]
     },
     {
         "id": 29,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Pup Tee",
+        "price": 45,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/2_fd2d3547-7ea4-41fc-b06c-a733c55fd14d_x1440.jpg?v=1602240680",
         "categories": [
             1
         ]
     },
     {
         "id": 30,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Death Bomber Jacket",
+        "price": 60,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/ALT-1_e9daa394-265b-4c39-a409-6b01f67f427c_x1440.jpg?v=1571274607",
         "categories": [
             1
         ]
     },
     {
         "id": 31,
-        "product_name": "Shirt",
+        "product_name": "The Nothing Tee",
         "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/TEMPLATE_x1440.jpg?v=1571274627",
         "categories": [
             1
         ]
     },
     {
         "id": 32,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Thinker Tee",
+        "price": 38,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_e0beb771-9d4b-43b1-9226-76d31aa758be_x1440.jpg?v=1571274623",
         "categories": [
             1
         ]
     },
     {
         "id": 33,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "THe Goblin Longsleeve",
+        "price": 44,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/flat_120aa3e8-2df6-4eeb-89d0-986497d9931a_x1440.jpg?v=1602145934",
         "categories": [
             1
         ]
     },
     {
         "id": 34,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Blackout Hoodie",
+        "price": 75,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/HERO_9c6eb65d-3ebc-41ad-b89d-52888c15089f_x1440.jpg?v=1602151749",
         "categories": [
             1
         ]
     },
     {
         "id": 35,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Happy Ending Hoodie",
+        "price": 80,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/front_620ebd9e-f276-4a1a-8b85-ff0573d4f8f4_x1440.png?v=1602242517",
         "categories": [
             1
         ]
     },
     {
         "id": 36,
-        "product_name": "Shirt",
-        "price": 12,
-        "image": "https://cdn.shopify.com/s/files/1/2580/8892/products/SD_Essentials_ESSENTIALTEE_Black1.jpg?v=1627657827",
-        "colors": [
-            "red",
-            "blue",
-            "cream"
-        ],
+        "product_name": "The Dead Cool Jacket",
+        "price": 150,
+        "image": "https://cdn.shopify.com/s/files/1/1297/1509/products/bigleg2_x1440.jpg?v=1575263349",
         "categories": [
             1
         ]

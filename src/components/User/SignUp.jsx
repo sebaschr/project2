@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../store/user/UserContext";
-import { useHistory } from "react-router-dom";
-import { Route } from "react-router-dom";
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../store/user/UserContext';
+import { useHistory } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 export default function SignUp({ ...rest }) {
   const { checkIfSignedIn } = useContext(UserContext);
 
-  const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
 
   const [signed, setSigned] = useState(false);
 
@@ -26,7 +26,7 @@ export default function SignUp({ ...rest }) {
       setSigned(valid);
 
       if (valid) {
-        history.push("/products");
+        history.push('/products');
       }
     };
 
@@ -36,21 +36,21 @@ export default function SignUp({ ...rest }) {
 
   function validation() {
     let errors = false;
-    if (user === "") {
+    if (user === '') {
       setErrorUser(true);
       errors = true;
     } else {
       setErrorUser(false);
     }
 
-    if (password === "") {
+    if (password === '') {
       setErrorPw(true);
       errors = true;
     } else {
       setErrorPw(false);
     }
 
-    if (email === "") {
+    if (email === '') {
       setErrorEmail(true);
       errors = true;
     } else {
@@ -62,14 +62,14 @@ export default function SignUp({ ...rest }) {
       }
     }
 
-    if (firstName === "") {
+    if (firstName === '') {
       setErrorName(true);
       errors = true;
     } else {
       setErrorName(false);
     }
 
-    if (lastName === "") {
+    if (lastName === '') {
       setErrorLastName(true);
       errors = true;
     } else {
@@ -87,7 +87,6 @@ export default function SignUp({ ...rest }) {
     event.preventDefault();
     const errors = validation();
     if (!errors) {
-      console.log("yo");
     }
   }
 

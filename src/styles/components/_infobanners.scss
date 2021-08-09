@@ -1,0 +1,68 @@
+@use "../abstracts/_breakpoints" as media;
+.infobanners {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+    backdrop-filter: blur(0.2px);
+    -webkit-filter: brightness(50%);
+    background-blend-mode: saturation;
+  }
+
+  &__content {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+}
+
+@include media.query('>=sm') {
+  .infobanners {
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      &.--right {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__image {
+      width: 50%;
+    }
+
+    &__content {
+      width: 50%;
+    }
+  }
+}
+
+@include media.query('>=lg') {
+  .infobanners {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__info {
+      width: 25%;
+      &.--right {
+        flex-direction: row;
+      }
+    }
+  }
+}

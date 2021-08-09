@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../store/user/UserContext";
-import AddReduceBtn from "./AddReduceBtn";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Link } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../store/user/UserContext';
+import AddReduceBtn from './AddReduceBtn';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ProductsPage(props) {
   const { product } = props;
-  const link = "/products/item/" + product.id;
+  const link = '/products/item/' + product.id;
   const [counter, setCounter] = useState(1);
   const [taken, setTaken] = useState(null);
   const [inCart, setInCart] = useState(false);
@@ -36,7 +36,7 @@ export default function ProductsPage(props) {
 
   const notify = () =>
     toast.info(`Item added to the cart`, {
-      position: "top-right",
+      position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -50,7 +50,7 @@ export default function ProductsPage(props) {
       to={link}
       onClick={(e) => {
         if (e.target !== e.currentTarget) {
-          if (["A", "BUTTON"].includes(e.target.nodeName)) {
+          if (['A', 'BUTTON'].includes(e.target.nodeName)) {
             e.preventDefault();
           }
         }
@@ -61,7 +61,9 @@ export default function ProductsPage(props) {
       <div className="products__content">
         <p className="products__title">{product.product_name}</p>
         <div className="products__desc">
-          <p className="products__text">Price: ${product.price}</p>
+          <p className="products__text">
+            Price: <span className="products__span">${product.price}</span>
+          </p>
         </div>
       </div>
       <button
@@ -82,11 +84,16 @@ export default function ProductsPage(props) {
 
       {!hidden && (
         <>
-          <p>Please enter a quantity</p>
+          <p className="products__cartdisc">Please enter a quantity</p>
 
           <AddReduceBtn changeWord={(counter) => setCounter(counter)} />
-          {inCart && <p>{taken} items in the cart already</p>}
+          {inCart && (
+            <p className="products__cartdisc">
+              {taken} items in the cart already
+            </p>
+          )}
           <button
+            className="products__button --full"
             onClick={(e) => {
               e.preventDefault();
               setHidden(true);
