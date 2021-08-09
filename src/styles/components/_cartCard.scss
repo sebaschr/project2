@@ -5,13 +5,18 @@
   text-align: left;
   margin: 4rem 0;
 
+  &__container {
+    min-height: 40vh;
+  }
+
   &__image {
     width: 100%;
     object-fit: cover;
   }
 
   &__content {
-    margin: 2rem 0;
+    width: 90%;
+    margin: 2rem auto;
   }
 
   &__title {
@@ -35,6 +40,22 @@
   &__pricing {
     display: flex;
     justify-content: space-around;
+  }
+
+  &__empty {
+    width: 90%;
+    height: 25vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 5rem;
+    margin: auto;
+    border: solid 1px $lightgrey;
+    &__title {
+      align-self: center;
+      font-size: 1.1rem;
+    }
   }
 
   &__button {

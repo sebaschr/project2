@@ -64,9 +64,12 @@ export default function CreditCardForm(props) {
     let dateNow = new Date(date);
 
     if (date === '') {
+      errors = true;
       setErrorDate(true);
     } else {
       if (dateNow < todayForComparison) {
+        errors = true;
+
         setErrorDate(true);
       } else {
         setErrorDate(false);

@@ -7,7 +7,6 @@ import { UserContext } from '../../store/user/UserContext';
 import {
   checkIfSignedIn,
   verifyCredentials,
-  signIn,
 } from '../../services/user-service';
 
 export default function SignIn({ ...rest }) {

@@ -38,7 +38,7 @@ export default function Navbar(props) {
   useEffect(() => {
     let auth = checkIfSignedIn();
     setLogged(auth);
-  }, [checkIfSignedIn]);
+  }, []);
   return (
     <nav className="navbar">
       {windowDimensions.width < 1200 ? (
@@ -126,7 +126,6 @@ export default function Navbar(props) {
                   onClick={(e) => {
                     signOut();
                     clearCart();
-                    window.location.reload();
                   }}
                 >
                   Sign Out
@@ -193,7 +192,6 @@ export default function Navbar(props) {
               onClick={(e) => {
                 signOut();
                 clearCart();
-                window.location.reload();
               }}
             >
               <FontAwesomeIcon className="navbar__icon" icon={faSignOutAlt} />

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import AddReduceBtn from './AddReduceBtn';
 import { UserContext } from '../../store/user/UserContext';
-import { useEffect } from 'react';
 export default function ProductCartCard(props) {
   const { removeFromCart, updateQuantity } = useContext(UserContext);
 

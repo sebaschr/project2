@@ -4,11 +4,8 @@ import { Route } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import { checkIfSignedIn, register } from '../../services/user-service';
-import useDebounce from '../../hooks/useDebounce';
 
 export default function SignUp({ ...rest }) {
-  const debouncedValue = useDebounce('', 3000);
-
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');

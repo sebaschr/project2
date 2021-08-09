@@ -14,7 +14,7 @@ export default function Footer(props) {
   useEffect(() => {
     let auth = checkIfSignedIn();
     setLogged(auth);
-  }, [checkIfSignedIn]);
+  }, []);
   return (
     <section className="footer">
       <div className="footer__links">
@@ -61,7 +61,6 @@ export default function Footer(props) {
             onClick={(e) => {
               signOut();
               clearCart();
-              window.location.reload();
             }}
           >
             Sign Out

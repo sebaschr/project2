@@ -1,10 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import CryptoJS from 'crypto-js';
-import { useEffect } from 'react';
 import { updateCart } from '../../services/user-service';
-
-const secretKey = 'pxq';
 
 const defaultUserData = {
   shoppingCart: () => {
@@ -79,11 +75,6 @@ export const UserProvider = (props) => {
   function clearCart() {
     setShoppingCart([]);
     localStorage.setItem('shoppingCart', JSON.stringify([]));
-    let user = localStorage.getItem('key');
-
-    if (user) {
-      updateCart(user);
-    }
   }
 
   function loadCart() {

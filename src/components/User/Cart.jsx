@@ -1,11 +1,12 @@
 import Navbar from '../Navbar/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { UserContext } from '../../store/user/UserContext';
 import { ProductContext } from '../../store/product/ProductContext';
+import { checkIfSignedIn } from '../../services/user-service';
 
 import ProductCartCard from '../Product/ProductCartCard';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -15,6 +16,7 @@ export default function Cart() {
   const { getProduct } = useContext(ProductContext);
 
   let cartProds = [];
+  const [logged, setLogged] = useState();
 
   shoppingCart.forEach((prod) => {
     let product = getProduct(prod.idProduct);
@@ -22,6 +24,11 @@ export default function Cart() {
     product.prodsInCart = prod.quantity;
     cartProds.push(product);
   });
+
+  useEffect(() => {
+    let auth = checkIfSignedIn();
+    setLogged(auth);
+  }, []);
 
   return (
     <>
@@ -47,30 +54,38 @@ export default function Cart() {
             );
           })
         ) : (
-          <h1>Empty</h1>
+          <div className="prodCart__empty">
+            <h1 className="prodCart__empty__title">
+              There are no products in the cart at this moment.
+            </h1>
+          </div>
         )}
       </div>
 
       <div className="btnsDiv">
         <div className="btnsDiv__child">
           <Link to="/checkout">
-            <button className="btnsDiv__button">Check Out As Guest</button>
+            <button className="btnsDiv__button">
+              {!logged ? 'Check Out As Guest' : 'Check Out'}
+            </button>
           </Link>
         </div>
-        <div className="btnsDiv__child">
-          <div className="btnsDiv__subChild">
-            <p className="btnsDiv__text">Already have an account?</p>
-            <Link to="/signin">
-              <button className="btnsDiv__button">Log In</button>
-            </Link>
+        {!logged && (
+          <div className="btnsDiv__child">
+            <div className="btnsDiv__subChild">
+              <p className="btnsDiv__text">Already have an account?</p>
+              <Link to="/signin">
+                <button className="btnsDiv__button">Log In</button>
+              </Link>
+            </div>
+            <div className="btnsDiv__subChild">
+              <p className="btnsDiv__text">No account yet?</p>
+              <Link to="/register">
+                <button className="btnsDiv__button">Sign Up</button>
+              </Link>
+            </div>
           </div>
-          <div className="btnsDiv__subChild">
-            <p className="btnsDiv__text">No account yet.</p>
-            <Link to="/">
-              <button className="btnsDiv__button">Sign Up</button>
-            </Link>
-          </div>
-        </div>
+        )}
       </div>
 
       <Footer />
